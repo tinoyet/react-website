@@ -1,0 +1,14 @@
+.footer {
+  color: white;
+  background-image: url('./../../assets/img/footer-top.png'), url('./../../assets/img/footer-bg.png');
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  .go-btn {
+    width: 350px;
+    height: 52px;
+    background: url('./../../assets/img/footer-bottom-input.png') no-repeat center;
+  }
+  .letter-spacing {
+    letter-spacing: 2px;
+  }
+}
