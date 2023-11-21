@@ -4,5 +4,16 @@
     background-position: center, center;
     background-repeat: no-repeat, no-repeat;
     min-height: 1173px;
+    .right-btn {
+      position: absolute;
+      right: -125px;
+      top: 610px;
+      -moz-transform:rotate(90deg);
+      -webkit-transform:rotate(90deg);
+      .icon-image {
+        -moz-transform:rotate(-90deg);
+        -webkit-transform:rotate(-90deg);
+      }
+    }
   }
 }

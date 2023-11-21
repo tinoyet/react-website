@@ -4,6 +4,11 @@
     "es2021": true,
     "node": true
   },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "overrides": [
     {
       "files": [
@@ -21,6 +26,7 @@
       ],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
+        "requireConfigFile": false,
         "ecmaFeatures": {
           "jsx": true
         },
