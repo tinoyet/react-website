@@ -1,9 +1,10 @@
 .home {
   margin-top: -135px;
   .home-top {
-    background-position: center, center;
+    background-position: bottom, center;
     background-repeat: no-repeat, no-repeat;
-    min-height: 1173px;
+    background-size: cover;
+    height: 1173px;
     .right-btn {
       position: absolute;
       right: -125px;

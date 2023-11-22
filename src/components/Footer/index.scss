@@ -1,7 +1,8 @@
 .footer {
   color: white;
   background-image: url('./../../assets/img/footer-top.png'), url('./../../assets/img/footer-bg.png');
-  background-position: center, center;
+  background-position: center, top;
+  background-size: cover;
   background-repeat: no-repeat, no-repeat;
   .go-btn {
     width: 350px;
