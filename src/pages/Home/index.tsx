@@ -13,12 +13,91 @@ import icon_08 from '@/assets/img/icon/icon-08.png';
 import icon_09 from '@/assets/img/icon/icon-09.png';
 import icon_10 from '@/assets/img/icon/icon-10.png';
 import icon_11 from '@/assets/img/icon/icon-11.png';
+import { Carousel } from 'antd';
+const contentStyle: React.CSSProperties = {
+  margin: 0,
+  height: '160px',
+  color: '#fff',
+  lineHeight: '160px',
+  textAlign: 'center',
+  background: '#364d79',
+};
 export default function index() {
   const { t } = useTranslation();
   const jumpTo = (url: any) => {
     const w: any = window.open('_black');
     w.location.href = url;
   };
+  const tabsList = [
+    {
+      id: 1,
+      title: 'CHARACTERS',
+      subTitle: 'FRESH UNIQUE',
+      desc: 'There are many great FPS games out there. So, to make things fresh and interesting, we made sure that you have hundreds of gun mods, powers, gadgets, and passives. Enemies also have a large amount of variety and abilities.',
+      img: heroImg,
+    },
+    {
+      id: 2,
+      title: 'Weapons & Abilities',
+      subTitle: 'FRESH UNIQUE',
+      desc: 'There are many great FPS games out there. So, to make things fresh and interesting, we made sure that you have hundreds of gun mods, powers, gadgets, and passives. Enemies also have a large amount of variety and abilities.',
+      img: heroImg,
+    },
+    {
+      id: 3,
+      title: 'GAMEPLAY',
+      subTitle: 'FRESH UNIQUE',
+      desc: 'There are many great FPS games out there. So, to make things fresh and interesting, we made sure that you have hundreds of gun mods, powers, gadgets, and passives. Enemies also have a large amount of variety and abilities.',
+      img: heroImg,
+    },
+    {
+      id: 4,
+      title: 'MOUNTS & MORE',
+      subTitle: 'FRESH UNIQUE',
+      desc: 'There are many great FPS games out there. So, to make things fresh and interesting, we made sure that you have hundreds of gun mods, powers, gadgets, and passives. Enemies also have a large amount of variety and abilities.',
+      img: heroImg,
+    },
+    {
+      id: 5,
+      title: 'COMBAT STYLE',
+      subTitle: 'FRESH UNIQUE',
+      desc: 'There are many great FPS games out there. So, to make things fresh and interesting, we made sure that you have hundreds of gun mods, powers, gadgets, and passives. Enemies also have a large amount of variety and abilities.',
+      img: heroImg,
+    },
+    {
+      id: 6,
+      title: 'PLAYER FIRST',
+      subTitle: 'FRESH UNIQUE',
+      desc: 'There are many great FPS games out there. So, to make things fresh and interesting, we made sure that you have hundreds of gun mods, powers, gadgets, and passives. Enemies also have a large amount of variety and abilities.',
+      img: heroImg,
+    },
+    {
+      id: 7,
+      title: 'LARGE SCALE SCI-FI BATTLES',
+      subTitle: 'FRESH UNIQUE',
+      desc: 'There are many great FPS games out there. So, to make things fresh and interesting, we made sure that you have hundreds of gun mods, powers, gadgets, and passives. Enemies also have a large amount of variety and abilities.',
+      img: heroImg,
+    },
+    {
+      id: 8,
+      title: 'OPEN WORLD GALACTIC PROPORTION',
+      subTitle: 'FRESH UNIQUE',
+      desc: 'There are many great FPS games out there. So, to make things fresh and interesting, we made sure that you have hundreds of gun mods, powers, gadgets, and passives. Enemies also have a large amount of variety and abilities.',
+      img: heroImg,
+    },
+    {
+      id: 9,
+      title: 'MULTIPLAYER CO-OP',
+      subTitle: 'FRESH UNIQUE',
+      desc: 'There are many great FPS games out there. So, to make things fresh and interesting, we made sure that you have hundreds of gun mods, powers, gadgets, and passives. Enemies also have a large amount of variety and abilities.',
+      img: heroImg,
+    },
+  ];
+
+  const onChange = (currentSlide: number) => {
+    console.log(currentSlide);
+  };
+
   return (
     <div className="home w-full color-fff">
       <div className="home-top relative" style={{ backgroundImage: `url(${heroImg})` }}>
@@ -88,6 +167,13 @@ export default function index() {
           </div>
         </div>
       </div>
+      <Carousel afterChange={onChange}>
+        {tabsList.map((item: any) => (
+          <div key={item.id}>
+            <h3 style={contentStyle}>{item.title}</h3>
+          </div>
+        ))}
+      </Carousel>
     </div>
   );
 }
