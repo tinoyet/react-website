@@ -17,33 +17,67 @@
       }
     }
   }
-  .test_box{
-    width: 500px;
-    border: 1px solid #333;
-    .test_nav{
-      display: flex;
-      justify-content: space-around;
-      list-style: none;
-      margin: 0;
-      li{
-        width: 150px;
-        height: 50px;
-        text-align: center;
-        line-height: 50px;
-        cursor: pointer;
-      }
-      .active{
-        background-color: skyblue;
-        position: relative;
-        &::after{
-          content:"";
-          display: inline-block;
-          position: absolute;
-          width: 60%;
-          bottom: 0;
-          left: 20%;
-          border-bottom: 2px solid red;
+  .tabs-content {
+    margin-top: -60px;
+    background-image: url('../../assets/img/icon/icon-12.png');
+    background-position: bottom, center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover;
+    height: 1414px;
+    .tabs-content-desc {
+      letter-spacing: 2px;
+      background-image: linear-gradient(-133deg, #0264F8, #00B3E0);
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+    .tabs-list {
+      overflow: hidden;
+      .tabs-list-item {
+        letter-spacing: 1px;
+        float: left;
+        min-width: 254px;
+        height: 52px;
+        line-height: 52px;
+        &:first-of-type {
+          margin-left: 70px;
         }
+        
+        &.on {
+          color: #E6A600;
+          background-image: url('../../assets/img/icon/icon-13.png');
+          background-repeat: no-repeat, no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+    }
+    .tabs-content-img {
+      width: 1440px;
+      height: 800px;
+      .bg-img {
+        width: 1440px;
+        height: 800px;
+        background-repeat: no-repeat, no-repeat;
+        background-size: cover;
+      }
+      .img-text {
+        position: absolute;
+        bottom: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1160px;
+        z-index: 3;
+        .img-title {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+      }
+      .tabs-content-img-mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 1440px;
+        height: 800px;
       }
     }
   }

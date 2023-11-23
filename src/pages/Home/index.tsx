@@ -4,6 +4,7 @@ import heroImg from '@/assets/img/hero-image.png';
 import icon_01 from '@/assets/img/icon/icon-01.png';
 import icon_02 from '@/assets/img/icon/icon-02.png';
 import footerListLineImg from '@/assets/img/footer-list-line.png';
+import footerListLineYellowImg from '@/assets/img/footer-list-line-yellow.png';
 import bottom1Img from '@/assets/img/icon/icon-03.png';
 import bottom2Img from '@/assets/img/icon/icon-04.png';
 import bottom3Img from '@/assets/img/icon/icon-05.png';
@@ -13,7 +14,11 @@ import icon_08 from '@/assets/img/icon/icon-08.png';
 import icon_09 from '@/assets/img/icon/icon-09.png';
 import icon_10 from '@/assets/img/icon/icon-10.png';
 import icon_11 from '@/assets/img/icon/icon-11.png';
+import icon_14 from '@/assets/img/icon/icon-14-2.png';
+import img_02 from '@/assets/img/icon/img-02.png';
 import { Carousel } from 'antd';
+import React, { useRef } from 'react';
+
 const contentStyle: React.CSSProperties = {
   margin: 0,
   height: '160px',
@@ -22,7 +27,9 @@ const contentStyle: React.CSSProperties = {
   textAlign: 'center',
   background: '#364d79',
 };
+
 export default function index() {
+  const carouselRef: any = useRef(null);
   const { t } = useTranslation();
   const jumpTo = (url: any) => {
     const w: any = window.open('_black');
@@ -34,70 +41,74 @@ export default function index() {
       title: 'CHARACTERS',
       subTitle: 'FRESH UNIQUE',
       desc: 'There are many great FPS games out there. So, to make things fresh and interesting, we made sure that you have hundreds of gun mods, powers, gadgets, and passives. Enemies also have a large amount of variety and abilities.',
-      img: heroImg,
+      img: img_02,
     },
     {
       id: 2,
       title: 'Weapons & Abilities',
       subTitle: 'FRESH UNIQUE',
       desc: 'There are many great FPS games out there. So, to make things fresh and interesting, we made sure that you have hundreds of gun mods, powers, gadgets, and passives. Enemies also have a large amount of variety and abilities.',
-      img: heroImg,
+      img: img_02,
     },
     {
       id: 3,
       title: 'GAMEPLAY',
       subTitle: 'FRESH UNIQUE',
       desc: 'There are many great FPS games out there. So, to make things fresh and interesting, we made sure that you have hundreds of gun mods, powers, gadgets, and passives. Enemies also have a large amount of variety and abilities.',
-      img: heroImg,
+      img: img_02,
     },
     {
       id: 4,
       title: 'MOUNTS & MORE',
       subTitle: 'FRESH UNIQUE',
       desc: 'There are many great FPS games out there. So, to make things fresh and interesting, we made sure that you have hundreds of gun mods, powers, gadgets, and passives. Enemies also have a large amount of variety and abilities.',
-      img: heroImg,
+      img: img_02,
     },
     {
       id: 5,
       title: 'COMBAT STYLE',
       subTitle: 'FRESH UNIQUE',
       desc: 'There are many great FPS games out there. So, to make things fresh and interesting, we made sure that you have hundreds of gun mods, powers, gadgets, and passives. Enemies also have a large amount of variety and abilities.',
-      img: heroImg,
+      img: img_02,
     },
     {
       id: 6,
       title: 'PLAYER FIRST',
       subTitle: 'FRESH UNIQUE',
       desc: 'There are many great FPS games out there. So, to make things fresh and interesting, we made sure that you have hundreds of gun mods, powers, gadgets, and passives. Enemies also have a large amount of variety and abilities.',
-      img: heroImg,
+      img: img_02,
     },
     {
       id: 7,
       title: 'LARGE SCALE SCI-FI BATTLES',
       subTitle: 'FRESH UNIQUE',
       desc: 'There are many great FPS games out there. So, to make things fresh and interesting, we made sure that you have hundreds of gun mods, powers, gadgets, and passives. Enemies also have a large amount of variety and abilities.',
-      img: heroImg,
+      img: img_02,
     },
     {
       id: 8,
       title: 'OPEN WORLD GALACTIC PROPORTION',
       subTitle: 'FRESH UNIQUE',
       desc: 'There are many great FPS games out there. So, to make things fresh and interesting, we made sure that you have hundreds of gun mods, powers, gadgets, and passives. Enemies also have a large amount of variety and abilities.',
-      img: heroImg,
+      img: img_02,
     },
     {
       id: 9,
       title: 'MULTIPLAYER CO-OP',
       subTitle: 'FRESH UNIQUE',
       desc: 'There are many great FPS games out there. So, to make things fresh and interesting, we made sure that you have hundreds of gun mods, powers, gadgets, and passives. Enemies also have a large amount of variety and abilities.',
-      img: heroImg,
+      img: img_02,
     },
   ];
 
   const onChange = (currentSlide: number) => {
     console.log(currentSlide);
   };
-
+  const befChange = (currentSlide: number) => {
+    console.log('bef', currentSlide);
+  };
+  const [tabsIndex, setTabsIndex] = useState(0);
+  const [slider, setSlider] = useState(1);
   return (
     <div className="home w-full color-fff">
       <div className="home-top relative" style={{ backgroundImage: `url(${heroImg})` }}>
@@ -167,13 +178,62 @@ export default function index() {
           </div>
         </div>
       </div>
-      <Carousel afterChange={onChange}>
-        {tabsList.map((item: any) => (
-          <div key={item.id}>
-            <h3 style={contentStyle}>{item.title}</h3>
+      <div className="tabs-content py-60">
+        <div className="w-1440 mx-auto">
+          <div className="tabs-content-desc mt-80 text-18 text-center">
+            {t("What's this about?").toLocaleUpperCase()}
           </div>
-        ))}
-      </Carousel>
+          <div className="tabs-content-title mt-20 text-80 h-60 l-60 text-center">
+            {t('GAME FEATURES').toLocaleUpperCase()}
+          </div>
+          <div className="mt-30 tabs-list">
+            {tabsList.map((item: any, index: number) => (
+              <div
+                className={`tabs-list-item cursor-pointer px-25 text-16 text-center mb-10 ${
+                  tabsIndex == index ? 'on' : ''
+                }`}
+                key={index}
+                onClick={() => {
+                  setTabsIndex(index);
+                  setSlider(index);
+                  carouselRef.current.goTo(index);
+                  // carouselRef.current.prev();
+                }}
+              >
+                {item.title}
+              </div>
+            ))}
+          </div>
+          <div className="tabs-content-img relative mt-20">
+            <Carousel
+              afterChange={onChange}
+              beforeChange={befChange}
+              dots={false}
+              ref={carouselRef}
+              className="w-1440 mx-auto h-800"
+            >
+              {tabsList.map((item: any, index: number) => (
+                <div className="relative" key={index}>
+                  <Image src={item.img} preview={false} height={800} width={1440}></Image>
+                  <div className="img-text" style={{ fontFamily: 'Industry-Book' }}>
+                    <div className="color-E8A300 text-14 font-600 letter-spacing-1">{item.subTitle}</div>
+                    <div className="img-title text-36 h-50 l-30 letter-spacing-1 color-fff relative mt-5">
+                      {item.title}
+                      <div className="absolute w-22px h-4px bottom-0 left-0 flex-center">
+                        <Image src={footerListLineYellowImg} preview={false} height={4} width={22}></Image>
+                      </div>
+                    </div>
+                    <div className="text-18 color-fff l-28 mt-20">{item.desc}</div>
+                  </div>
+                </div>
+              ))}
+            </Carousel>
+            <div className="tabs-content-img-mask">
+              <Image src={icon_14} preview={false} height={800} width={1440}></Image>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

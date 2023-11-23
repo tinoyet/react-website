@@ -10,7 +10,6 @@
     "i18next": "^22.5.1",
     "i18next-http-backend": "^2.2.1",
     "nprogress": "^0.2.0",
-    "rc-tabs": "^12.13.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^12.3.1",

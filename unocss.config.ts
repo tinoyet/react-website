@@ -82,6 +82,7 @@ export default defineConfig({
     [/^width-p-(\d+)$/, ([, d]) => ({ width: `${d}%` })],
     [/^br-(\d+)$/, ([, d]) => ({ 'border-radius': `${d}px` })],
     [/^bg-color-(\w+)$/, ([, d]) => ({ 'background-color': `#${d}` })],
+    [/^letter-spacing-(\d+)$/, ([, d]) => ({ 'letter-spacing': `${d}px` })],
   ],
   theme: {
     colors: {
