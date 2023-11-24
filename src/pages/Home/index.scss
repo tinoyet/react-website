@@ -6,9 +6,10 @@
     background-size: cover;
     height: 1173px;
     .right-btn {
-      position: absolute;
+      position: fixed;
       right: -125px;
       top: 610px;
+      z-index: 10;
       -moz-transform:rotate(90deg);
       -webkit-transform:rotate(90deg);
       .icon-image {

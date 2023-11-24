@@ -7,6 +7,7 @@
     "@unocss/reset": "^0.53.1",
     "antd": "^5.6.1",
     "axios": "^1.4.0",
+    "cross-env": "^7.0.3",
     "i18next": "^22.5.1",
     "i18next-http-backend": "^2.2.1",
     "nprogress": "^0.2.0",
@@ -18,8 +19,12 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "dev": "cross-env VITE_ENV_TYPE=dev vite --mode dev",
+    "dev:test": "cross-env VITE_ENV_TYPE=test vite ",
+    "prod": "cross-env VITE_ENV_TYPE=prod vite --mode prod",
+    "build": "cross-env VITE_ENV_TYPE=prod vite build --mode prod",
+    "build:dev": "cross-env VITE_ENV_TYPE=dev vite build --mode dev",
+    "build:test": "cross-env VITE_ENV_TYPE=test vite build --mode test",
     "preview": "vite preview",
     "lint": "eslint . --fix",
     "prepare": "husky install"
