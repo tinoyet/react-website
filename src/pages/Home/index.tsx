@@ -1,5 +1,6 @@
 import './index.scss';
-import { Image } from 'antd';
+import { Carousel, Input, Image } from 'antd';
+import React, { useRef } from 'react';
 import heroImg from '@/assets/img/hero-image.png';
 import icon_01 from '@/assets/img/icon/icon-01.png';
 import icon_02 from '@/assets/img/icon/icon-02.png';
@@ -15,9 +16,10 @@ import icon_09 from '@/assets/img/icon/icon-09.png';
 import icon_10 from '@/assets/img/icon/icon-10.png';
 import icon_11 from '@/assets/img/icon/icon-11.png';
 import icon_14 from '@/assets/img/icon/icon-14-2.png';
+import icon_16 from '@/assets/img/icon/icon-16.png';
+import icon_17 from '@/assets/img/icon/icon-17.png';
 import img_02 from '@/assets/img/icon/img-02.png';
-import { Carousel } from 'antd';
-import React, { useRef } from 'react';
+
 
 const contentStyle: React.CSSProperties = {
   margin: 0,
@@ -31,6 +33,7 @@ const contentStyle: React.CSSProperties = {
 export default function index() {
   const carouselRef: any = useRef(null);
   const { t } = useTranslation();
+  const email = "";
   const jumpTo = (url: any) => {
     const w: any = window.open('_black');
     w.location.href = url;
@@ -232,6 +235,25 @@ export default function index() {
               <Image src={icon_14} preview={false} height={800} width={1440}></Image>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="form-content">
+        <div className="w-1440 mx-auto pt-300 relative color-000">
+          <div className="w-910">
+            <div className="text-18 letter-spacing-1 font-600 pl-5">{t('NEWSLETTER')}</div>
+            <div className="text-80 letter-spacing-1 font-600 h-60 l-60 mt-10">{t('BE THE FIRST TO KNOW')}</div>
+            <div className="text-18 font-600 mt-45 pl-5">{t('Don’t feel like backing just yet? No worries, please consider giving us your email, we’ll send you updates content, lore material, Q&A that might answer your questions, and some offers that you wouldn’t want to miss!')}</div>
+            <div className="text-18 font-600 mt-45 pl-5">{t('Having you as a subscriber would already be an incredible proof of support, so thank you in advance!')}</div>
+            <div className="mt-60 w-773 h-92 relative">
+              <div className="flex-between-center absolute form-content-input width-p-100 pl-30">
+                <Input placeholder={`${t('Enter your email')}`} defaultValue={email} bordered={false} />
+                <div className="sub-btn text-24 color-fff letter-spacing-1 font-600 cursor-pointer">{t('SUBSCRIBE')}</div>
+              </div>
+              <Image src={icon_17} preview={false} ></Image>
+            </div>
+            {/* <div className="text-18 font-600 mt-10 pl-5">{t('fedgfege')}</div> */}
+          </div>
+          <div className="absolute form-content-img"><Image src={icon_16} preview={false} ></Image></div>
         </div>
       </div>
     </div>

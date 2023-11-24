@@ -82,4 +82,36 @@
       }
     }
   }
+  .form-content {
+    background-image: url('../../assets/img/icon/icon-15.png');
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% 1165px;
+    height: 1165px;
+    overflow-x: hidden;
+    .form-content-input {
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      z-index: 1;
+      .sub-btn {
+        width: 255px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+      }
+      input {
+        width: 450px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 16px;
+      }
+    }
+    .form-content-img {
+      width: 786px;
+      height: 1100px;
+      right: -260px;
+      top: 7px;
+      z-index: 2;
+    }
+  }
 }
