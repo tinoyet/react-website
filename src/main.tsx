@@ -11,7 +11,7 @@ import '@/styles/main.scss';
 import 'uno.css'; //引入unocss
 import 'nprogress/nprogress.css';
 initI18n();
-// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(
   <Provider store={store}>

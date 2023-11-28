@@ -26,8 +26,8 @@ export default function index() {
   const tabsHandle = (active: string) => setActive(active);
 
   return (
-    <div className="header h-135px w-full min-w-1680 max-w-1850 mx-auto flex items-center justify-between relative px-34px box-border z-2">
-      <div className="flex items-center">
+    <div className="header h-135px w-full min-w-1680 max-w-1850 mx-auto flex items-center justify-between relative px-34px box-border z-11">
+      <div className="flex items-center ">
         <div className="w-18.95vw max-w-364px">
           <Image src={logoImg} width={'100%'} preview={false}></Image>
         </div>
@@ -38,7 +38,9 @@ export default function index() {
               className={`w-7.6vw max-w-146px min-w-100px h-108px flex-center relative cursor-pointer`}
               onClick={() => tabsHandle(item)}
             >
-              <span className={` flex-center h-50px hover ${active == item ? 'nav-cur color-00CFFF' : ''}`}>{item}</span>
+              <span className={` flex-center h-50px hover ${active == item ? 'nav-cur color-00CFFF' : ''}`}>
+                {item}
+              </span>
               {active == item && (
                 <img src={navActiveImg} width={120} className="absolute bottom--67px left-0 h-142px w-full" alt="" />
               )}

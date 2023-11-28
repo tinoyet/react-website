@@ -82,6 +82,41 @@
       }
     }
   }
+  .video-content {
+    background-image: url('../../assets/img/icon/icon-18.png');
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% 1633px;
+    height: 1633px;
+    .video-content-img {
+      width: 1115px;
+      height: 1501px;
+      left: -360px;
+      top: 150px;
+      z-index: 2;
+    }
+    .video-list {
+      &::-webkit-scrollbar {
+          /*Scroll bar overall style*/
+          width : 4px;  /*Height and width respectively correspond to the size of horizontal and vertical scroll bars*/
+          height: 53px;
+          
+      }
+      &::-webkit-scrollbar-thumb {
+          /*Small square in scroll bar*/
+          border-radius: 10px;
+          // background: #7B9CC7;
+          background-image: url('../../assets/img/icon/icon-20.png');
+          background-size: 117px 53px;
+          background-repeat: no-repeat;
+      }
+      &::-webkit-scrollbar-track {
+          /*Track inside scroll bar*/
+          background: #69767E;
+          margin: 15px 0;
+      }
+    }
+
+  }
   .form-content {
     background-image: url('../../assets/img/icon/icon-15.png');
     background-repeat: no-repeat, no-repeat;

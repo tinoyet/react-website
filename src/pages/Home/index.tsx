@@ -18,9 +18,9 @@ import icon_11 from '@/assets/img/icon/icon-11.png';
 import icon_14 from '@/assets/img/icon/icon-14-2.png';
 import icon_16 from '@/assets/img/icon/icon-16.png';
 import icon_17 from '@/assets/img/icon/icon-17.png';
+import icon_19 from '@/assets/img/icon/icon-19.png';
 import img_02 from '@/assets/img/icon/img-02.png';
-
-
+import HomeVideo from '@/components/Youtube';
 const contentStyle: React.CSSProperties = {
   margin: 0,
   height: '160px',
@@ -112,9 +112,13 @@ export default function index() {
   };
   const [tabsIndex, setTabsIndex] = useState(0);
   const [slider, setSlider] = useState(1);
+  const [showVideo, setShowVideo] = useState(false);
+
   return (
     <div className="home w-full color-fff">
-      <div className="home-top relative" style={{ backgroundImage: `url(${heroImg})` }}>
+      <HomeVideo isVisible={showVideo} onClose={() => setShowVideo(false)} />
+
+      <div className="home-top relative z-10" style={{ backgroundImage: `url(${heroImg})` }}>
         <div className="right-btn flex-start-center">
           <div className="font-600">{t('Follow us on')}</div>
           <div className="mx-15 w-40 h-1 bg-color-fff"></div>
@@ -157,9 +161,7 @@ export default function index() {
               preview={false}
               height={92}
               width={388}
-              onClick={() => {
-                jumpTo('https://youtu.be/py6R8wYQDAA');
-              }}
+              onClick={() => setShowVideo(true)}
             ></Image>
           </div>
           <div className="pl-25">
@@ -181,7 +183,8 @@ export default function index() {
           </div>
         </div>
       </div>
-      <div className="tabs-content py-60">
+
+      <div className="tabs-content py-60 relative z-9">
         <div className="w-1440 mx-auto">
           <div className="tabs-content-desc mt-80 text-18 text-center">
             {t("What's this about?").toLocaleUpperCase()}
@@ -237,7 +240,13 @@ export default function index() {
           </div>
         </div>
       </div>
-      <div className="form-content">
+      <div className="video-content -mt-100 relative z-8">
+        <div className="w-1440 mx-auto pt-300 relative color-000 text-right">
+          
+        </div>
+        {/* <div className="absolute video-content-img"><Image src={icon_19} preview={false} ></Image></div> */}
+      </div>
+      <div className="form-content  relative z-8">
         <div className="w-1440 mx-auto pt-300 relative color-000">
           <div className="w-910">
             <div className="text-18 letter-spacing-1 font-600 pl-5">{t('NEWSLETTER')}</div>
