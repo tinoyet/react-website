@@ -262,7 +262,7 @@ export default function index() {
             </div>
             {/* <div className="text-18 font-600 mt-10 pl-5">{t('fedgfege')}</div> */}
           </div>
-          <div className="absolute form-content-img"><Image src={icon_16} preview={false} ></Image></div>
+          {/* <div className="absolute form-content-img"><Image src={icon_16} preview={false} ></Image></div> */}
         </div>
       </div>
     </div>
