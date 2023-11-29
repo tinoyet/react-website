@@ -16,11 +16,17 @@ import icon_09 from '@/assets/img/icon/icon-09.png';
 import icon_10 from '@/assets/img/icon/icon-10.png';
 import icon_11 from '@/assets/img/icon/icon-11.png';
 import icon_14 from '@/assets/img/icon/icon-14-2.png';
-import icon_16 from '@/assets/img/icon/icon-16.png';
+import icon_22 from '@/assets/img/icon/icon-22.png';
 import icon_17 from '@/assets/img/icon/icon-17.png';
-import icon_19 from '@/assets/img/icon/icon-19.png';
+import icon_21 from '@/assets/img/icon/icon-21.png';
 import img_02 from '@/assets/img/icon/img-02.png';
+import img_03 from '@/assets/img/icon/img-03.png';
+import img_04 from '@/assets/img/icon/img-04.png';
+import img_05 from '@/assets/img/icon/img-05.png';
+import img_06 from '@/assets/img/icon/img-06.png';
+import img_07 from '@/assets/img/icon/img-07.png';
 import HomeVideo from '@/components/Youtube';
+import YouTube, { YouTubeProps } from "react-youtube";
 const contentStyle: React.CSSProperties = {
   margin: 0,
   height: '160px',
@@ -38,6 +44,38 @@ export default function index() {
     const w: any = window.open('_black');
     w.location.href = url;
   };
+  const videoList = [
+    {
+      id: 1,
+      img: img_03,
+      videoId:'py6R8wYQDAA',
+    },
+    {
+      id: 2,
+      img: img_04,
+      videoId:'EL_4QrQzyTU',
+    },
+    {
+      id: 3,
+      img: img_05,
+      videoId:'2SWrgdRl4pY',
+    },
+    {
+      id: 4,
+      img: img_06,
+      videoId:'VOnKTbIn9Ww',
+    },
+    {
+      id: 5,
+      img: img_07,
+      videoId:'4rwxXcxpLeM',
+    },
+    {
+      id: 6,
+      img: img_03,
+      videoId:'Uy6mpc11_ow',
+    },
+  ]
   const tabsList = [
     {
       id: 1,
@@ -110,7 +148,27 @@ export default function index() {
   const befChange = (currentSlide: number) => {
     console.log('bef', currentSlide);
   };
+  const [videoCode, setVideoCode] = React.useState(()=>{
+    return videoList[0].videoId
+  });
+  const opts: YouTubeProps['opts'] = {
+    height: '610',
+    width: '1400',
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters
+      autoplay: 1
+    }
+  };
+  const checkElapsedTime = (e:any) => {
+    console.log(e.target.playerInfo.playerState);
+    const duration = e.target.getDuration();
+    const currentTime = e.target.getCurrentTime();
+    if (currentTime / duration > 0.95) {
+      // setModalIsOpen(true);
+    }
+  };
   const [tabsIndex, setTabsIndex] = useState(0);
+  
   const [slider, setSlider] = useState(1);
   const [showVideo, setShowVideo] = useState(false);
 
@@ -186,8 +244,8 @@ export default function index() {
 
       <div className="tabs-content py-60 relative z-9">
         <div className="w-1440 mx-auto">
-          <div className="tabs-content-desc mt-80 text-18 text-center">
-            {t("What's this about?").toLocaleUpperCase()}
+          <div className="tabs-content-desc mt-80 text-18 text-center flex-center-center">
+            <span>{t("What's this about?").toLocaleUpperCase()}</span>
           </div>
           <div className="tabs-content-title mt-20 text-80 h-60 l-60 text-center">
             {t('GAME FEATURES').toLocaleUpperCase()}
@@ -206,7 +264,7 @@ export default function index() {
                   // carouselRef.current.prev();
                 }}
               >
-                {item.title}
+                {item.title.toLocaleUpperCase()}
               </div>
             ))}
           </div>
@@ -241,8 +299,41 @@ export default function index() {
         </div>
       </div>
       <div className="video-content -mt-100 relative z-8">
-        <div className="w-1440 mx-auto pt-300 relative color-000 text-right">
+        <div className="w-1440 mx-auto pt-300 relative color-000 ">
+          <div className="video-title text-18 text-right flex-end-center"><span>{t('Photographers From Another Sun').toLocaleUpperCase()}</span></div>
+          <div className="flex-end-center mt-10">
+            <div className="flex-end-center w-1250 ">
+              <Image src={icon_22} preview={false} height={13} width={8}></Image>
+              <div className="flex-1 ml-10 mr-20 h-1 b-b border-dashed op-10" style={{borderColor:'#fff'}}></div>
+              <div className="text-80 h-64 l-64 color-fff">{t('MEDIA GALLERY')}</div>
+            </div>
+          </div>
           
+          <div className="w-1400 mx-auto flex-center-center bg-color-000 mt-80">
+            <YouTube
+              videoId={videoCode}
+              onStateChange={(e) => checkElapsedTime(e)}
+              opts={opts}
+            />
+          </div>
+          <div className="overflow-y-hidden w-1400 h-201 overflow-x-auto video-scroll mx-auto mt-25">
+            <div className="w-1800 h-201 video-list">
+              {videoList.map((item: any, index: number) => (
+                <div
+                  className={`video-list-item cursor-pointer flex-center-center relative float-left w-298 h-201 ${
+                    videoCode == item.videoId ? 'on' : ''
+                  }`}
+                  key={index}
+                  onClick={() => {
+                    setVideoCode(item.videoId);
+                  }}
+                >
+                  <div className="-mt-5 w-268 h-171"><Image src={item.img} preview={false} height={171} width={268}></Image></div>
+                  <div className="absolute video-img-mask"><Image src={icon_21} preview={false} height={201} width={298}></Image></div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
         {/* <div className="absolute video-content-img"><Image src={icon_19} preview={false} ></Image></div> */}
       </div>

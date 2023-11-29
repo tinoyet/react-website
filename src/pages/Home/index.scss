@@ -26,11 +26,14 @@
     background-size: cover;
     height: 1414px;
     .tabs-content-desc {
-      letter-spacing: 2px;
-      background-image: linear-gradient(-133deg, #0264F8, #00B3E0);
-      color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
+      span {
+        letter-spacing: 2px;
+        background-image: linear-gradient(-133deg,#00B3E0, #0264F8);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+      
     }
     .tabs-list {
       overflow: hidden;
@@ -87,6 +90,16 @@
     background-repeat: no-repeat, no-repeat;
     background-size: 100% 1633px;
     height: 1633px;
+    .video-title {
+      span {
+        letter-spacing: 2px;
+        background-image: linear-gradient(-133deg, #00B3E0, #0264F8);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+      
+    }
     .video-content-img {
       width: 1115px;
       height: 1501px;
@@ -94,27 +107,43 @@
       top: 150px;
       z-index: 2;
     }
-    .video-list {
+    .video-scroll {
+      .video-list {
+        .video-list-item {
+          &:first-of-type {
+            margin-left: -15px;
+          }
+          .video-img-mask {
+            display: none;
+          }
+          &.on {
+            .video-img-mask {
+              display: block;
+            }
+          }
+        }
+      }
       &::-webkit-scrollbar {
-          /*Scroll bar overall style*/
-          width : 4px;  /*Height and width respectively correspond to the size of horizontal and vertical scroll bars*/
-          height: 53px;
-          
+        /*Scroll bar overall style*/
+        width : 4px;  /*Height and width respectively correspond to the size of horizontal and vertical scroll bars*/
+        height: 4px;
+        
       }
       &::-webkit-scrollbar-thumb {
           /*Small square in scroll bar*/
           border-radius: 10px;
-          // background: #7B9CC7;
-          background-image: url('../../assets/img/icon/icon-20.png');
-          background-size: 117px 53px;
-          background-repeat: no-repeat;
+          background: #1e4475;
+          // background-image: url('../../assets/img/icon/icon-20.png');
+          // background-size: 117px 53px;
+          // background-repeat: no-repeat;
       }
       &::-webkit-scrollbar-track {
           /*Track inside scroll bar*/
-          background: #69767E;
-          margin: 15px 0;
+          background: #08293d;
+          margin: 0 10px;
       }
     }
+    
 
   }
   .form-content {
