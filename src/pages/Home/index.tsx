@@ -1,5 +1,5 @@
 import './index.scss';
-import { Carousel, Input, Image } from 'antd';
+import { Carousel, Input, Image,Col, Row } from 'antd';
 import React, { useRef } from 'react';
 import heroImg from '@/assets/img/hero-image.png';
 import icon_01 from '@/assets/img/icon/icon-01.png';
@@ -16,15 +16,20 @@ import icon_09 from '@/assets/img/icon/icon-09.png';
 import icon_10 from '@/assets/img/icon/icon-10.png';
 import icon_11 from '@/assets/img/icon/icon-11.png';
 import icon_14 from '@/assets/img/icon/icon-14-2.png';
-import icon_22 from '@/assets/img/icon/icon-22.png';
 import icon_17 from '@/assets/img/icon/icon-17.png';
 import icon_21 from '@/assets/img/icon/icon-21.png';
+import icon_22 from '@/assets/img/icon/icon-22.png';
 import img_02 from '@/assets/img/icon/img-02.png';
 import img_03 from '@/assets/img/icon/img-03.png';
 import img_04 from '@/assets/img/icon/img-04.png';
 import img_05 from '@/assets/img/icon/img-05.png';
 import img_06 from '@/assets/img/icon/img-06.png';
 import img_07 from '@/assets/img/icon/img-07.png';
+import img_08 from '@/assets/img/icon/img-08.png';
+import img_09 from '@/assets/img/icon/img-09.png';
+import img_10 from '@/assets/img/icon/img-10.png';
+import img_11 from '@/assets/img/icon/img-11.png';
+import img_12 from '@/assets/img/icon/img-12.png';
 import HomeVideo from '@/components/Youtube';
 import YouTube, { YouTubeProps } from "react-youtube";
 const contentStyle: React.CSSProperties = {
@@ -141,7 +146,43 @@ export default function index() {
       img: img_02,
     },
   ];
-
+  const newsList = [
+    {
+      id: 1,
+      img: img_08,
+      time:'1/29/2023',
+      title:'UPDATE 94 : THE TRIPLE',
+      desc:'Earth From Another Sun',
+    },
+    {
+      id: 2,
+      img: img_09,
+      time:'1/29/2023',
+      title:'UPDATE 93 : THE TRIPLE',
+      desc:'Earth From Another Sun',
+    },
+    {
+      id: 3,
+      img: img_10,
+      time:'1/29/2023',
+      title:'UPDATE 92 : THE TRIPLE',
+      desc:'Earth From Another Sun',
+    },
+    {
+      id: 4,
+      img: img_11,
+      time:'1/29/2023',
+      title:'UPDATE 91 : THE TRIPLE',
+      desc:'Earth From Another Sun',
+    },
+    {
+      id: 5,
+      img: img_12,
+      time:'1/29/2023',
+      title:'UPDATE 90 : THE TRIPLE',
+      desc:'Earth From Another Sun',
+    },
+  ]
   const onChange = (currentSlide: number) => {
     console.log(currentSlide);
   };
@@ -171,6 +212,7 @@ export default function index() {
   
   const [slider, setSlider] = useState(1);
   const [showVideo, setShowVideo] = useState(false);
+
 
   return (
     <div className="home w-full color-fff">
@@ -354,6 +396,39 @@ export default function index() {
             {/* <div className="text-18 font-600 mt-10 pl-5">{t('fedgfege')}</div> */}
           </div>
           {/* <div className="absolute form-content-img"><Image src={icon_16} preview={false} ></Image></div> */}
+        </div>
+      </div>
+      <div className="news-content  relative z-7 -mt-100">
+        <div className="w-1440 mx-auto pt-200 relative ">
+          <div className="news-title text-18 text-center "><span>{t('What’s up in the galaxy?').toLocaleUpperCase()}</span></div>
+          <div className="news-desc text-80 text-center "><span >{t('NEWS & UPDATES').toLocaleUpperCase()}</span></div>
+          <div className="news-list mt-30">
+            <Row gutter={[24, 24]} wrap>
+              {newsList.map((item: any, index: number) => (
+                <Col span={index == 0 ? 16 : 8} key={index}>
+                  <div className="relative news-list-item h-433" style={{ backgroundImage: `url(${item.img})` }}>
+                    <div className="absolute item-box bottom-70px left-40px">
+                      <div className="item-time"><span>{item.time}</span></div>
+                      <div className="item-title relative text-26 h-50 l-35 border-bottom-1px-686868 pb-10">
+                        <span>{item.title}</span>
+                        <div className="absolute w-22px h-4px bottom-0 left-0 flex-center">
+                          <Image src={footerListLineImg} preview={false} height={4} width={22}></Image>
+                        </div>
+                      </div>
+                      <div className="item-desc text-16 mt-10"><span>{item.desc}</span></div>
+                    </div>
+                  </div>
+                </Col>
+              ))}
+            </Row>
+          </div>
+          <div className="w-400 mx-auto mt-70 flex-center-center">
+            <Image src={icon_22} preview={false} height={13} width={8}></Image>
+            <div className="w-70 ml-5 mr-10 h-1 b-b border-dashed op-10" style={{borderColor:'#fff'}}></div>
+            <div className="cursor-pointer relative more-btn">{t('Show More').toLocaleUpperCase()}</div>
+            <div className="w-70 ml-10 mr-5 h-1 b-b border-dashed op-10" style={{borderColor:'#fff'}}></div>
+            <Image className="rotate-180" src={icon_22} preview={false} height={13} width={8}></Image>
+          </div>
         </div>
       </div>
     </div>
