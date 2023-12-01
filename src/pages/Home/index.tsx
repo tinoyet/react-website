@@ -431,6 +431,55 @@ export default function index() {
           </div>
         </div>
       </div>
+      <div className="config-content  relative z-6 -mt-100">
+        <div className="w-1240 mx-auto pt-200 ">
+          <div className="config-title text-18 text-center "><span>{t('Conquest-proof equipment checklist').toLocaleUpperCase()}</span></div>
+          <div className="config-desc text-80 text-center "><span >{t('System Requirements').toLocaleUpperCase()}</span></div>
+          <div className="flex-center-center mt-30  width-p-100">
+            <div className="width-p-50 list-left">
+              <div className="flex-start-center relative config-item">
+                <div className="width-p-50"></div>
+                <div className="width-p-50 text-18 color-00B2DE h-55 l-55">{t('MINIMUM')}</div>
+              </div>
+              <div className="flex-start-center relative config-item pt-20 ">
+                <div className="width-p-50 text-26 color-5A6266 pl-35 h-80">{t('OS')}</div>
+                <div className="width-p-50 color-fff h-80 ">
+                  <span className="text-22">{t('Win10, 8 or 7 SP1+')}</span><br/>
+                  <span className="text-16">{t('64 Bits')}</span>
+                </div>
+              </div>
+              <div className="flex-start-center relative config-item pt-20 ">
+                <div className="width-p-50 text-26 color-5A6266 pl-35 h-80">{t('PROCESSOR')}</div>
+                <div className="width-p-50 color-fff h-80 ">
+                  <span className="text-22">{t('i5-6600 / Ryzen 5 1600')}</span>
+                </div>
+              </div>
+              <div className="flex-start-center relative config-item pt-20 ">
+                <div className="width-p-50 text-26 color-5A6266 pl-35 h-120">{t('MEMORY')}</div>
+                <div className="width-p-50 color-fff h-120 ">
+                  <span className="text-22">{t('8 GB RAM')}</span><br/>
+                  <span className="text-16">{t('might need extra virtual memory to run properly')}</span>
+                </div>
+              </div>
+              <div className="flex-start-center relative config-item pt-20 ">
+                <div className="width-p-50 text-26 color-5A6266 pl-35 h-100">{t('GRAPHICS')}</div>
+                <div className="width-p-50 color-fff h-100 ">
+                  <span className="text-22">{t('Nvidia® GeForce GTX 1050')}</span><br/>
+                  <span className="text-22">{t('AMD Radeon™ 560 4GB')}</span>
+                </div>
+              </div>
+              <div className="flex-start-center relative config-item pt-20 ">
+                <div className="width-p-50 text-26 color-5A6266 pl-35 h-80">{t('STORAGE')}</div>
+                <div className="width-p-50 color-fff h-80 ">
+                  <span className="text-22">{t('30 GB')}</span><br/>
+                  <span className="text-16">{t('Available Space')}</span>
+                </div>
+              </div>
+            </div>
+            <div className="width-p-50"></div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

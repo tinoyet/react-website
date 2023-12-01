@@ -222,4 +222,56 @@
       }
     }
   }
+  .config-content {
+    background-image: url('../../assets/img/icon/icon-23.png');
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% 1550px;
+    height: 1550px;
+    .config-title {
+      span {
+        letter-spacing: 2px;
+        background-image: linear-gradient(-133deg, #00B3E0, #0264F8);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+    }
+    .list-left {
+      .config-item {
+        &::before {
+          content: "";
+          background-image: url('../../assets/img/buy-now-sign.png');
+          position: absolute;
+          bottom: -14px;
+          left: 0;
+          width: 15px;
+          height: 14px;
+          rotate: 270deg;
+        }
+        &:last-of-type {
+          &::before {
+            content: "";
+            background-image: none;
+            position: absolute;
+            bottom: -14px;
+            left: 0;
+            width: 15px;
+            height: 14px;
+            rotate: 270deg;
+          }
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 14px;
+          width: calc(100% - 14px);
+          height: 1px;
+          background-color: #fff;
+          opacity: .11;
+        }
+      }
+    }
+    
+  }
 }
