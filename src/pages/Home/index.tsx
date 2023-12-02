@@ -19,6 +19,9 @@ import icon_14 from '@/assets/img/icon/icon-14-2.png';
 import icon_17 from '@/assets/img/icon/icon-17.png';
 import icon_21 from '@/assets/img/icon/icon-21.png';
 import icon_22 from '@/assets/img/icon/icon-22.png';
+import icon_25 from '@/assets/img/icon/icon-25.png';
+import icon_27 from '@/assets/img/icon/icon-27.png';
+import icon_28 from '@/assets/img/icon/icon-28.png';
 import img_02 from '@/assets/img/icon/img-02.png';
 import img_03 from '@/assets/img/icon/img-03.png';
 import img_04 from '@/assets/img/icon/img-04.png';
@@ -183,6 +186,91 @@ export default function index() {
       desc:'Earth From Another Sun',
     },
   ]
+  
+
+  const [qaList, setQaChange] = useState([
+    {
+      id: 1,
+      isShow:true,
+      title:'What is Earth From Another Sun?',
+      desc:'Earth From Another Sun is a PC and Console game about conquering the galaxy. The emphasis is on open-world exploration and planetary surface battles, played in first-person perspective. You are the commander of your own space-faring faction, and during battles you command your troops as well as engage your enemies directly. The open-world galaxy in Earth From Another Sun is densely populated, and has many mysterious character, locations, treasures and stories for you to discover. Whether you decide to conquer other nations and star systems, and eventually rule the galaxy, or stay a lone-wolf warrior working tirelessly to repel an impending alien invasion, or maybe just become the wealthiest merchant in the known universe, the choice is yours.',
+    },
+    {
+      id: 2,
+      isShow:false,
+      title:'Is the galaxy in EFAS an open world?',
+      desc:'Earth From Another Sun is a PC and Console game about conquering the galaxy. The emphasis is on open-world exploration and planetary surface battles, played in first-person perspective. You are the commander of your own space-faring faction, and during battles you command your troops as well as engage your enemies directly. The open-world galaxy in Earth From Another Sun is densely populated, and has many mysterious character, locations, treasures and stories for you to discover. Whether you decide to conquer other nations and star systems, and eventually rule the galaxy, or stay a lone-wolf warrior working tirelessly to repel an impending alien invasion, or maybe just become the wealthiest merchant in the known universe, the choice is yours.',
+    },
+    {
+      id: 3,
+      isShow:false,
+      title:'When will the game be finished?',
+      desc:'Earth From Another Sun is a PC and Console game about conquering the galaxy. The emphasis is on open-world exploration and planetary surface battles, played in first-person perspective. You are the commander of your own space-faring faction, and during battles you command your troops as well as engage your enemies directly. The open-world galaxy in Earth From Another Sun is densely populated, and has many mysterious character, locations, treasures and stories for you to discover. Whether you decide to conquer other nations and star systems, and eventually rule the galaxy, or stay a lone-wolf warrior working tirelessly to repel an impending alien invasion, or maybe just become the wealthiest merchant in the known universe, the choice is yours.',
+    },
+    {
+      id: 4,
+      isShow:false,
+      title:'Are there special perks for participating in your crowdfunding?',
+      desc:'Earth From Another Sun is a PC and Console game about conquering the galaxy. The emphasis is on open-world exploration and planetary surface battles, played in first-person perspective. You are the commander of your own space-faring faction, and during battles you command your troops as well as engage your enemies directly. The open-world galaxy in Earth From Another Sun is densely populated, and has many mysterious character, locations, treasures and stories for you to discover. Whether you decide to conquer other nations and star systems, and eventually rule the galaxy, or stay a lone-wolf warrior working tirelessly to repel an impending alien invasion, or maybe just become the wealthiest merchant in the known universe, the choice is yours.',
+    },
+    {
+      id: 5,
+      isShow:false,
+      title:'Who are you and what have you made before?',
+      desc:'Earth From Another Sun is a PC and Console game about conquering the galaxy. The emphasis is on open-world exploration and planetary surface battles, played in first-person perspective. You are the commander of your own space-faring faction, and during battles you command your troops as well as engage your enemies directly. The open-world galaxy in Earth From Another Sun is densely populated, and has many mysterious character, locations, treasures and stories for you to discover. Whether you decide to conquer other nations and star systems, and eventually rule the galaxy, or stay a lone-wolf warrior working tirelessly to repel an impending alien invasion, or maybe just become the wealthiest merchant in the known universe, the choice is yours.',
+    },
+    {
+      id: 6,
+      isShow:false,
+      title:'How can I offer suggestions and participate in the development?',
+      desc:'Earth From Another Sun is a PC and Console game about conquering the galaxy. The emphasis is on open-world exploration and planetary surface battles, played in first-person perspective. You are the commander of your own space-faring faction, and during battles you command your troops as well as engage your enemies directly. The open-world galaxy in Earth From Another Sun is densely populated, and has many mysterious character, locations, treasures and stories for you to discover. Whether you decide to conquer other nations and star systems, and eventually rule the galaxy, or stay a lone-wolf warrior working tirelessly to repel an impending alien invasion, or maybe just become the wealthiest merchant in the known universe, the choice is yours.',
+    },
+    {
+      id: 7,
+      isShow:false,
+      title:'Why are you crowdfunding?',
+      desc:'Earth From Another Sun is a PC and Console game about conquering the galaxy. The emphasis is on open-world exploration and planetary surface battles, played in first-person perspective. You are the commander of your own space-faring faction, and during battles you command your troops as well as engage your enemies directly. The open-world galaxy in Earth From Another Sun is densely populated, and has many mysterious character, locations, treasures and stories for you to discover. Whether you decide to conquer other nations and star systems, and eventually rule the galaxy, or stay a lone-wolf warrior working tirelessly to repel an impending alien invasion, or maybe just become the wealthiest merchant in the known universe, the choice is yours.',
+    },
+    {
+      id: 8,
+      isShow:false,
+      title:'When can I start playing?',
+      desc:'Earth From Another Sun is a PC and Console game about conquering the galaxy. The emphasis is on open-world exploration and planetary surface battles, played in first-person perspective. You are the commander of your own space-faring faction, and during battles you command your troops as well as engage your enemies directly. The open-world galaxy in Earth From Another Sun is densely populated, and has many mysterious character, locations, treasures and stories for you to discover. Whether you decide to conquer other nations and star systems, and eventually rule the galaxy, or stay a lone-wolf warrior working tirelessly to repel an impending alien invasion, or maybe just become the wealthiest merchant in the known universe, the choice is yours.',
+    },
+    {
+      id: 9,
+      isShow:false,
+      title:'I have received the activation code, how do I play?',
+      desc:'Earth From Another Sun is a PC and Console game about conquering the galaxy. The emphasis is on open-world exploration and planetary surface battles, played in first-person perspective. You are the commander of your own space-faring faction, and during battles you command your troops as well as engage your enemies directly. The open-world galaxy in Earth From Another Sun is densely populated, and has many mysterious character, locations, treasures and stories for you to discover. Whether you decide to conquer other nations and star systems, and eventually rule the galaxy, or stay a lone-wolf warrior working tirelessly to repel an impending alien invasion, or maybe just become the wealthiest merchant in the known universe, the choice is yours.',
+    },
+    {
+      id: 10,
+      isShow:false,
+      title:'I have a question/problem, how do I get in touch?',
+      desc:'Earth From Another Sun is a PC and Console game about conquering the galaxy. The emphasis is on open-world exploration and planetary surface battles, played in first-person perspective. You are the commander of your own space-faring faction, and during battles you command your troops as well as engage your enemies directly. The open-world galaxy in Earth From Another Sun is densely populated, and has many mysterious character, locations, treasures and stories for you to discover. Whether you decide to conquer other nations and star systems, and eventually rule the galaxy, or stay a lone-wolf warrior working tirelessly to repel an impending alien invasion, or maybe just become the wealthiest merchant in the known universe, the choice is yours.',
+    },
+    {
+      id: 11,
+      isShow:false,
+      title:'I’m having trouble with payment, what do I do?',
+      desc:'Earth From Another Sun is a PC and Console game about conquering the galaxy. The emphasis is on open-world exploration and planetary surface battles, played in first-person perspective. You are the commander of your own space-faring faction, and during battles you command your troops as well as engage your enemies directly. The open-world galaxy in Earth From Another Sun is densely populated, and has many mysterious character, locations, treasures and stories for you to discover. Whether you decide to conquer other nations and star systems, and eventually rule the galaxy, or stay a lone-wolf warrior working tirelessly to repel an impending alien invasion, or maybe just become the wealthiest merchant in the known universe, the choice is yours.',
+    },
+    {
+      id: 12,
+      isShow:true,
+      title:'Privacy Policy',
+      desc:'Earth From Another Sun is a PC and Console game about conquering the galaxy. The emphasis is on open-world exploration and planetary surface battles, played in first-person perspective. You are the commander of your own space-faring faction, and during battles you command your troops as well as engage your enemies directly. The open-world galaxy in Earth From Another Sun is densely populated, and has many mysterious character, locations, treasures and stories for you to discover. Whether you decide to conquer other nations and star systems, and eventually rule the galaxy, or stay a lone-wolf warrior working tirelessly to repel an impending alien invasion, or maybe just become the wealthiest merchant in the known universe, the choice is yours.',
+    },
+  ])
+  const changeStatus = (id:any,itemStatus:any)=>{
+    let array = [...qaList];
+    array.forEach((obj:any) =>{
+      if(obj.id == id) {
+        obj.isShow = !itemStatus
+      }
+    })
+    setQaChange(array)
+  }
   const onChange = (currentSlide: number) => {
     console.log(currentSlide);
   };
@@ -431,12 +519,12 @@ export default function index() {
           </div>
         </div>
       </div>
-      <div className="config-content  relative z-6 -mt-100">
-        <div className="w-1240 mx-auto pt-200 ">
+      <div className="config-content  relative z-6 -mt-50">
+        <div className="w-1240 mx-auto pt-120 ">
           <div className="config-title text-18 text-center "><span>{t('Conquest-proof equipment checklist').toLocaleUpperCase()}</span></div>
-          <div className="config-desc text-80 text-center "><span >{t('System Requirements').toLocaleUpperCase()}</span></div>
-          <div className="flex-center-center mt-30  width-p-100">
-            <div className="width-p-50 list-left">
+          <div className="config-desc text-80 text-center -mt-25"><span >{t('System Requirements').toLocaleUpperCase()}</span></div>
+          <div className="flex-center-start width-p-100">
+            <div className="width-p-50 list-left mt-20">
               <div className="flex-start-center relative config-item">
                 <div className="width-p-50"></div>
                 <div className="width-p-50 text-18 color-00B2DE h-55 l-55">{t('MINIMUM')}</div>
@@ -476,7 +564,117 @@ export default function index() {
                 </div>
               </div>
             </div>
-            <div className="width-p-50"></div>
+            <div className="width-p-50 list-right -mt-60 -ml-85 pt-75 pl-90">
+              <div className="h-60 l-60 text-18 font-600 letter-spacing-1 pl-65">{t('RECOMMENDED')}</div>
+              <div className=" color-fff h-100 pt-20 pl-65 config-cell relative">
+                <span className="text-22">{t('Win10, 8 or 7 SP1+')}</span><br/>
+                <span className="text-16">{t('64 Bits')}</span>
+                <div className="absolute w-22px h-4px bottom-0 left-25px flex-center">
+                  <Image src={footerListLineImg} preview={false} height={4} width={22}></Image>
+                </div>
+              </div>
+              <div className=" color-fff h-100 pt-20 pl-65 config-cell relative">
+                <span className="text-22">{t('i7-8700 / Ryzen 7 2700')}</span><br/>
+                <span className="text-16">{t('or Equivalent')}</span>
+                <div className="absolute w-22px h-4px bottom-0 left-25px flex-center">
+                  <Image src={footerListLineImg} preview={false} height={4} width={22}></Image>
+                </div>
+              </div>
+              <div className=" color-fff h-140 pt-40 pl-65 config-cell relative">
+                <span className="text-22">{t('16 GB RAM')}</span>
+                <div className="absolute w-22px h-4px bottom-0 left-25px flex-center">
+                  <Image src={footerListLineImg} preview={false} height={4} width={22}></Image>
+                </div>
+              </div>
+              <div className=" color-fff h-120 pt-20 pl-65 config-cell relative">
+                <span className="text-22">{t('Nvidia® GeForce GTX 1070')}</span><br/>
+                <span className="text-22">{t('AMD Radeon™ RX 5600 XT')}</span>
+                <div className="absolute w-22px h-4px bottom-0 left-25px flex-center">
+                  <Image src={footerListLineImg} preview={false} height={4} width={22}></Image>
+                </div>
+              </div>
+              <div className=" color-fff h-100 pt-20 pl-65 config-cell relative">
+                <span className="text-22">{t('30 GB')}</span><br/>
+                <span className="text-16">{t('Available Space')}</span>
+                <div className="absolute w-22px h-4px bottom-0 left-25px flex-center">
+                  <Image src={footerListLineImg} preview={false} height={4} width={22}></Image>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="qa-content  relative z-5 -mt-80">
+        <div className="w-1440 mx-auto pt-200 pb-100">
+          <div className="qa-title text-18 text-center "><span>{t('SYSTEM REQUIREMENTS').toLocaleUpperCase()}</span></div>
+          <div className="qa-desc text-80 text-center -mt-25"><span >{t('FREQUENLY ASKED QUESTIONS').toLocaleUpperCase()}</span></div>
+          <div className="flex-between-start width-p-100 mt-100">
+            <div className="qa-list">
+              <Row gutter={[30, 0]} wrap>
+                {qaList.slice(0, 6).map((item: any, index: number) => (
+                  <Col span={24} key={index}>
+                    <div className=" color-fff h-80  qa-cell relative pl-20">
+                      <div className="flex-between-center h-80">
+                        <div className="text-20">{t(item.title)}</div>
+                        <div 
+                          className={`${item.isShow ? 'hidden':''} cursor-pointer`}
+                          onClick={() => {
+                            changeStatus(item.id,item.isShow)
+                          }}
+                        >
+                          <Image src={icon_27} preview={false} height={20} width={20}></Image>
+                        </div>
+                        <div 
+                          className={`${item.isShow ? '':'hidden'} cursor-pointer`}
+                          onClick={() => {
+                            changeStatus(item.id,item.isShow)
+                          }}
+                        >
+                          <Image src={icon_28} preview={false} height={20} width={20}></Image>
+                        </div>
+                      </div>
+                      <div className="absolute w-22px h-5px bottom-0 right-0 flex-center">
+                        <Image src={icon_25} preview={false} height={5} width={23}></Image>
+                      </div>
+                    </div>
+                    <div className={`${item.isShow ? '':'hidden'} pl-20 py-30 color-9EAAB3 text-17`}>{item.desc}</div>
+                  </Col>
+                ))}
+              </Row>
+            </div>
+            <div className="qa-list">
+              <Row gutter={[30, 0]} wrap>
+                {qaList.slice(6, 12).map((item: any, index: number) => (
+                  <Col span={24} key={index}>
+                    <div className=" color-fff h-80  qa-cell relative pl-20">
+                      <div className="flex-between-center h-80">
+                        <div className="text-20">{t(item.title)}</div>
+                        <div 
+                          className={`${item.isShow ? 'hidden':''} cursor-pointer`}
+                          onClick={() => {
+                            changeStatus(item.id,item.isShow)
+                          }}
+                        >
+                          <Image src={icon_27} preview={false} height={20} width={20}></Image>
+                        </div>
+                        <div 
+                          className={`${item.isShow ? '':'hidden'} cursor-pointer`}
+                          onClick={() => {
+                            changeStatus(item.id,item.isShow)
+                          }}
+                        >
+                          <Image src={icon_28} preview={false} height={20} width={20}></Image>
+                        </div>
+                      </div>
+                      <div className="absolute w-22px h-5px bottom-0 right-0 flex-center">
+                        <Image src={icon_25} preview={false} height={5} width={23}></Image>
+                      </div>
+                    </div>
+                    <div className={`${item.isShow ? '':'hidden'} pl-20 py-30 color-9EAAB3 text-17`}>{item.desc}</div>
+                  </Col>
+                ))}
+              </Row>
+            </div>
           </div>
         </div>
       </div>

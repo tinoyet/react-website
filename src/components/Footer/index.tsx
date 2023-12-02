@@ -19,7 +19,7 @@ export default function index() {
   const { t } = useTranslation();
 
   return (
-    <div className="footer w-full h-565px relative bg-transparent flex justify-center">
+    <div className="footer w-full h-565px relative bg-transparent flex justify-center -mt-40">
       <div className="w-1400px flex justify-between">
         <div className="pt-122px">
           <Image src={logoImg} preview={false}></Image>

@@ -223,10 +223,10 @@
     }
   }
   .config-content {
-    background-image: url('../../assets/img/icon/icon-23.png');
+    background-image: url('../../assets/img/icon/icon-29.png');
     background-repeat: no-repeat, no-repeat;
-    background-size: 100% 1550px;
-    height: 1550px;
+    background-size: 100% 1104px;
+    height: 1104px;
     .config-title {
       span {
         letter-spacing: 2px;
@@ -272,6 +272,75 @@
         }
       }
     }
+    .list-right {
+      background-image: url('../../assets/img/icon/icon-26.png');
+      background-repeat: no-repeat, no-repeat;
+      background-size: 656px 858px;
+      height: 858px;
+      .config-cell {
+        &::before {
+          content: "";
+          background-image: url('../../assets/img/buy-now-sign.png');
+          position: absolute;
+          bottom: 0;
+          right: 76px;
+          width: 15px;
+          height: 14px;
+          rotate: 90deg;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 39px;
+          width: calc(100% - 115px);
+          height: 1px;
+          background-color: #fff;
+          opacity: .11;
+        }
+      }
+    }
     
+  }
+  .qa-content {
+    background-position: center, center;
+    background-image: url('../../assets/img/icon/icon-30.png');
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% 100%;
+    min-height: 1438px;
+    .qa-title {
+      span {
+        letter-spacing: 2px;
+        background-image: linear-gradient(-133deg, #00B3E0, #0264F8);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+    }
+    .qa-list {
+      width: calc(50% - 15px);
+      .qa-cell {
+        &::before {
+          content: "";
+          background-image: url('../../assets/img/buy-now-sign.png');
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 15px;
+          height: 14px;
+          rotate: 180deg;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: calc(100%);
+          height: 1px;
+          background-color: #fff;
+          opacity: .11;
+        }
+      }
+    }
   }
 }
