@@ -2,7 +2,7 @@
   color: white;
   background-image: url('./../../assets/img/footer-top.png'), url('./../../assets/img/footer-bg.png');
   background-position: center, top;
-  background-size: cover;
+  background-size: 100% 565px;
   background-repeat: no-repeat, no-repeat;
   .go-btn {
     width: 350px;
@@ -11,5 +11,9 @@
   }
   .letter-spacing {
     letter-spacing: 2px;
+  }
+  .icon-hover:hover{
+    width: 30px ;
+    cursor: pointer; 
   }
 }

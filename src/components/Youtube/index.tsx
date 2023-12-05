@@ -18,8 +18,8 @@ export default function HomeVideo({ isVisible, onClose }: HomeVideoProps) {
   };
 
   const opts: YouTubeProps['opts'] = {
-    height: '490',
-    width: '740',
+    height: '580',
+    width: '1000',
     playerVars: {
       autoplay: 1,
     },

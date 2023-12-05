@@ -26,7 +26,7 @@ export default function index() {
   const tabsHandle = (active: string) => setActive(active);
 
   return (
-    <div className="header h-135px w-full min-w-1680 max-w-1850 mx-auto flex items-center justify-between relative px-34px box-border z-11">
+    <div className="header h-135px w-full min-w-1440 max-w-1850 mx-auto flex items-center justify-between relative px-34px box-border z-11">
       <div className="flex items-center ">
         <div className="w-18.95vw max-w-364px">
           <Image src={logoImg} width={'100%'} preview={false}></Image>

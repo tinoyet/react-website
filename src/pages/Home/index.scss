@@ -343,4 +343,27 @@
       }
     }
   }
+  .btn-down {
+     width: 268px;
+     height: 92px;
+     background: url('../../assets/img/icon/icon-31.png') no-repeat;
+     background-size: 100% 100%;
+     font-size: 24px;
+     color: white;
+     font-weight: 700;
+    }
+    
+    .btn-watch {
+     width: 388px;
+     height: 92px;
+     background: url('../../assets/img/icon/icon-02.png') no-repeat;
+     background-size: 100% 100%;
+     font-size: 24px;
+     color: white;
+     font-weight: 700;
+     padding-left: 50px;
+     padding-right: 130px;
+     line-height: 92px;
+     text-align: center;
+    }
 }

@@ -22,6 +22,7 @@ import icon_22 from '@/assets/img/icon/icon-22.png';
 import icon_25 from '@/assets/img/icon/icon-25.png';
 import icon_27 from '@/assets/img/icon/icon-27.png';
 import icon_28 from '@/assets/img/icon/icon-28.png';
+import icon_31 from '@/assets/img/icon/icon-31.png';
 import img_02 from '@/assets/img/icon/img-02.png';
 import img_03 from '@/assets/img/icon/img-03.png';
 import img_04 from '@/assets/img/icon/img-04.png';
@@ -310,19 +311,19 @@ export default function index() {
         <div className="right-btn flex-start-center">
           <div className="font-600">{t('Follow us on')}</div>
           <div className="mx-15 w-40 h-1 bg-color-fff"></div>
-          <div className="mr-20 w-20 h-20 icon-image">
+          <div className="mr-20 w-20 h-20 icon-image cursor-pointer" onClick={() => jumpTo('https://www.youtube.com/@EFAS')}>
             <Image src={icon_07} preview={false} height={20} width={20}></Image>
           </div>
-          <div className="mr-20 w-20 h-20 icon-image">
+          <div className="mr-20 w-20 h-20 icon-image cursor-pointer" onClick={() => jumpTo('https://twitter.com/PlayEFAS')}>
             <Image src={icon_08} preview={false} height={20} width={20}></Image>
           </div>
-          <div className="mr-20 w-20 h-20 icon-image">
+          <div className="mr-20 w-20 h-20 icon-image cursor-pointer" onClick={() => jumpTo('https://discord.com/invite/efas')}>
             <Image src={icon_09} preview={false} height={20} width={20}></Image>
           </div>
-          <div className="mr-20 w-20 h-20 icon-image">
+          <div className="mr-20 w-20 h-20 icon-image cursor-pointer" onClick={() => jumpTo('https://www.instagram.com/earthfromanothersun/')}>
             <Image src={icon_10} preview={false} height={20} width={20}></Image>
           </div>
-          <div className="mr-20 w-20 h-20 icon-image">
+          <div className="mr-20 w-20 h-20 icon-image cursor-pointer" onClick={() => jumpTo('https://www.facebook.com/EarthFromAnotherSun')}>
             <Image src={icon_11} preview={false} height={20} width={20}></Image>
           </div>
         </div>
@@ -341,19 +342,14 @@ export default function index() {
               )}
             </div>
           </div>
-          <div className="flex-start-center pl-20">
-            <Image src={icon_01} preview={false} height={220} width={263}></Image>
-            <Image
-              className="ml-20 cursor-pointer"
-              src={icon_02}
-              preview={false}
-              height={92}
-              width={388}
-              onClick={() => setShowVideo(true)}
-            ></Image>
+          <div className="flex-start-center pl-20 mt-50 mb-100">
+            <div className="btn-down flex-center relative hover mark-cur mr-20px cursor-pointer">{t('BUY NOW')}</div>
+            <div className="btn-watch  relative mark-cur hover cursor-pointer" onClick={() => setShowVideo(true)}>
+              {t('WATCH TRAILER')}
+            </div>
           </div>
           <div className="pl-25">
-            <div className="text-14">{t('Available on')}:</div>
+            <div className="text-14">{t('Available on').toUpperCase()}:</div>
             <div className="flex-start-center mt-35">
               <div className="mr-36px flex-center">
                 <Image src={bottom1Img} width={120} preview={false}></Image>
